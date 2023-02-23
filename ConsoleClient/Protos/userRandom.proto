@@ -1,0 +1,26 @@
+﻿syntax = "proto3";
+
+
+
+package userRandom;
+
+service UserRandomA{
+	rpc GetRandomUsersList(UserRequest) returns(ListReply);
+}
+
+message UserRequest{
+	int32 count = 1;
+}
+
+message ListReply{
+	repeated UserReply Users = 1;
+}
+
+message UserReply{
+	string userName = 1;
+	string email = 2;
+	string phoneNum = 3;
+	string avatarUrl = 4;
+	string surname = 5;
+	string name = 6;
+}
