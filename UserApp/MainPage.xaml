@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="UserApp.MainPage">
+             x:Class="UserApp.MainPage"
+             xmlns:local="clr-namespace:UserApp.Model">
 
     <ScrollView>
 
@@ -32,10 +33,40 @@
                                 Padding="5"
                                 HeightRequest="30"/>
                     </VerticalStackLayout>
-                    
+
                 </HorizontalStackLayout>
             </Frame>
 
+            <CollectionView x:Name="collectionViewUser">
+                <CollectionView.ItemsSource>
+                    <x:List Type="{x:Type local:User}">
+                    </x:List>
+                </CollectionView.ItemsSource>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="Azure">
+                            <HorizontalStackLayout Spacing="20">
+                                <VerticalStackLayout>
+                                    <Frame WidthRequest="100" HeightRequest="100" Padding="0">
+                                        <Image Source="{Binding AvatarUrl}"/>
+                                    </Frame>
+                                    <Label Text="{Binding UserName}"/>
+                                </VerticalStackLayout>
+                                <VerticalStackLayout>
+                                    <HorizontalStackLayout Spacing="5">
+                                        <Label Text="{Binding Name}"/>
+                                        <Label Text="{Binding Surname}"/>
+                                    </HorizontalStackLayout>
+                                    <Label Text="{Binding Email}"/>
+                                    <Label Text="{Binding Phone}"/>
+                                    <Button Text="Смотреть" FontSize="15" Padding="5" HeightRequest="30"/>
+                                </VerticalStackLayout>
+
+                            </HorizontalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
 
         </VerticalStackLayout>
     </ScrollView>
