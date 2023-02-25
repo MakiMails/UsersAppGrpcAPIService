@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace UsersAppGrpcService.Models
+﻿namespace UserApp.Models
 {
-    public class User
+    class User
     {
         public string UserName { get; set; }
         public string Email { get; set; }
