@@ -1,6 +1,5 @@
 ﻿using Grpc.Core;
 using UsersAppGrpcService.Models;
-using UserRandom;
 
 namespace UsersAppGrpcService.Services
 {

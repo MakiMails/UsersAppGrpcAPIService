@@ -1,4 +1,4 @@
-﻿namespace UserApp.Models
+﻿namespace UserApp.Model
 {
     class User
     {

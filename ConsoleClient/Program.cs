@@ -1,6 +1,7 @@
-﻿using Grpc.Net.Client;
-using UserRandom;
-using static UserRandom.UserRandomA;
+﻿using ConsoleClient;
+using Grpc.Net.Client;
+
+using static ConsoleClient.UserRandomA;
 
 
 Console.Write("Введите адрес: ");
@@ -34,7 +35,7 @@ async Task<ListReply> GetUsers(UserRandomAClient client)
     {
         return await client.GetRandomUsersListAsync(new UserRequest { Count = 5 });
     }
-    catch 
+    catch
     {
         Console.WriteLine("Произошла ошибка!!!");
         return null;

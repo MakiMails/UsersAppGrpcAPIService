@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UsersAppGrpcService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,5 +9,5 @@ var app = builder.Build();
 
 app.MapGrpcService<UserRandomAPIService>();
 app.MapGet("/", () => "Hello!");
-
 app.Run();
+

@@ -1,7 +1,6 @@
 ﻿syntax = "proto3";
 
-	
-option csharp_namespace = "ConsoleClient";
+option csharp_namespace = "UserGrpcClassLib";
 
 package userRandom;
 

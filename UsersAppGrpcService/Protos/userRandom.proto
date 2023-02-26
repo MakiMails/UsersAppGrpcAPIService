@@ -1,6 +1,7 @@
 ﻿syntax = "proto3";
 
-
+	
+option csharp_namespace = "UsersAppGrpcService";
 
 package userRandom;
 
