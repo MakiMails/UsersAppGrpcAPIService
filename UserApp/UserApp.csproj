@@ -49,8 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="ViewModel\" />
-	  <Folder Include="View\" />
+	  <ProjectReference Include="..\UserGrpcClassLib\UserGrpcClassLib.csproj" />
 	</ItemGroup>
+
+
 
 </Project>
