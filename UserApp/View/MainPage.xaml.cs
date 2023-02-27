@@ -14,7 +14,7 @@ namespace UserApp
         {
             InitializeComponent();
 
-            string address = "http://localhost:5000";
+            string address = "https://localhost:5001";
              userViewModel = new UserViewModel(address);
             
             

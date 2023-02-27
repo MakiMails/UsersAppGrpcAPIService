@@ -42,7 +42,7 @@ namespace UserApp.ViewModel
         {
             try
             {
-                var u = await client.GetRandomUsersListAsync(new UserRequest { Count = 5 });
+                var u = await client.GetRandomUsersListAsync(new UserRequest { Count = 50 });
                 Users = u;
             }
             catch
